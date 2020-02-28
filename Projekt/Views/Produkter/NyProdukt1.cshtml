@@ -1,0 +1,36 @@
+﻿@model Produkter
+
+
+    <form asp-action="NyProdukt1" method="post">
+        <h4> Din beställning </h4>
+        <!--
+        <div>
+            <input asp-for="ProduktId" value="@Context.Request.Query["ProduktId"]" type="hidden" />
+        </div>
+            -->
+        <!---
+    <div>
+        <label asp-for="CommentId">CommentId:</label>
+        <input asp-for="CommentId" value="@ViewBag.ProduktId" />
+    </div>
+        -->
+    <div>
+        
+        <label asp-for="Name">Produkt namn:</label>
+        <input asp-for="Name" required/>
+    </div>
+        <div>
+            <label asp-for="ShortDescription">Beskrivning</label>
+            <input asp-for="ShortDescription"required />
+        </div>
+        <div>
+            <label asp-for="Price">Pris</label>
+            <input asp-for="Price" required/>
+        </div>
+        <div>
+            <input asp-for="CategoryId"required type="hidden"/>
+        </div>
+        <div>
+            <input type="submit" value="Complete" />
+        </div>
+    </form>

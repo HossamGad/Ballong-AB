@@ -1,0 +1,43 @@
+﻿@model Produkter
+
+
+    <form asp-action="UpdateProdukt1" asp-route-produktId="@Model.ProduktId" method="post">
+        <h4> Your Product </h4>
+        <!--
+    <div>
+        <input asp-for="ProduktId" value="@Context.Request.Query["ProduktId"]" type="hidden" />
+    </div>
+        -->
+        <!---
+    <div>
+        <label asp-for="CommentId">CommentId:</label>
+        <input asp-for="CommentId" value="@ViewBag.ProduktId" />
+    </div>
+        -->
+        <div>
+            <input asp-for="ProduktId"required type="hidden"/>
+        </div>
+
+        <div>
+            <label asp-for="Name">Write the of the product:</label>
+            <input asp-for="Name" required/>
+        </div>
+
+        <!--
+    <div>
+        <label asp-for="Text">Description</label>
+        <input asp-for="Text" />
+    </div>
+        -->
+
+        <div>
+            <label asp-for="Price">Price</label>
+            <input asp-for="Price" required/>
+        </div>
+        <div>
+            <input asp-for="CategoryId" required type="hidden"/>
+        </div>
+        <div>
+            <input type="submit" value="Complete" />
+        </div>
+    </form>

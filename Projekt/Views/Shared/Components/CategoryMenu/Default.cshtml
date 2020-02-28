@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Category>
+
+    <a asp-controller="Produkter">
+    </a>
+
+    
+    <ul >
+        @foreach (var category in Model)
+        {
+            <li>
+                <a asp-controller="Produkter" asp-action="List"
+                   asp-route-category="@category.CategoryName">@category.CategoryName</a>
+            </li>
+        }
+        <li>
+            <a asp-controller="Produkter" asp-action="List" asp-route-Category="">Visa alla produkter</a>
+        </li>
+    </ul>

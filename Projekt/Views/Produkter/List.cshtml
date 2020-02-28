@@ -1,0 +1,23 @@
+﻿@model ProdukterListViewModel
+
+<h1>@Model.CurrentCategory</h1>
+
+<h1 class="col-xs-pull-6">Produkter</h1>
+
+@foreach (var produkter in Model.Produkter)
+{
+    <partial name="_ProduktCard" model="produkter" />
+}
+
+<div class="pull-right">
+    <h2 >Total kostnad:</h2>  
+    <h3 >@Model.Produkter.Sum(price => price.Price).ToString("c")</h3>
+</div>
+
+
+<div class="pull-left">
+    <a asp-controller="Produkter" asp-action="NyProdukt1" asp-route-currentCategory="@Model.CurrentCategory"><h2>Lägga till en beställning</h2></a>
+</div>
+
+
+

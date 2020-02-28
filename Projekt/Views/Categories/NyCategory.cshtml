@@ -1,0 +1,28 @@
+﻿@model Category
+
+
+    <form asp-action="NyCategory" method="post">
+        <h4> Din projekt</h4>
+        <!--
+        <div>
+            <input asp-for="CategoryId" value="@Context.Request.Query["CategoryId"]" type="hidden" />
+        </div>
+            -->
+        <!---
+    <div>
+        <label asp-for="CommentId">CommentId:</label>
+        <input asp-for="CommentId" value="@ViewBag.CategoryId" />
+    </div>
+        -->
+        <div>
+            <label asp-for="CategoryName">Projekt namn:</label>
+            <input asp-for="CategoryName" required/>
+        </div>
+        <div>
+            <label asp-for="Description">Beskrivning:</label>
+            <input asp-for="Description" required/>
+        </div>
+        <div>
+            <input type="submit" value="Complete" />
+        </div>
+    </form>
