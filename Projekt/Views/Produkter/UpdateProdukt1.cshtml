@@ -2,7 +2,7 @@
 
 
     <form asp-action="UpdateProdukt1" asp-route-produktId="@Model.ProduktId" method="post">
-        <h4> Your Product </h4>
+        <h4> Din beställning </h4>
         <!--
     <div>
         <input asp-for="ProduktId" value="@Context.Request.Query["ProduktId"]" type="hidden" />
@@ -19,19 +19,13 @@
         </div>
 
         <div>
-            <label asp-for="Name">Write the of the product:</label>
+            <label asp-for="Name">Produkt namn:</label>
             <input asp-for="Name" required/>
         </div>
 
-        <!--
-    <div>
-        <label asp-for="Text">Description</label>
-        <input asp-for="Text" />
-    </div>
-        -->
-
+     
         <div>
-            <label asp-for="Price">Price</label>
+            <label asp-for="Price">Pris</label>
             <input asp-for="Price" required/>
         </div>
         <div>
